@@ -4,6 +4,7 @@ from django.utils.text import slugify
 class Course(models.Model):
     title = models.CharField(max_length=200, blank=False, null=False)
     description = models.TextField(blank=False, null=False)
+    image_preview = models.ImageField(upload_to='course_previews/', blank=True, null=True)
     slug = models.SlugField(unique=True, max_length=200)
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)

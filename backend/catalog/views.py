@@ -14,7 +14,7 @@ class CoursePreviewViewSet(viewsets.ReadOnlyModelViewSet):
                 video_duration=Sum('videos__duration'),
                 materials_count=Count('materials', distinct=True)
             )
-            .only('id', 'title', 'slug', 'description', 'is_active', 'updated_at')
+            .only('id', 'title', 'slug', 'description', 'is_active', 'updated_at', 'image_preview')
             .prefetch_related('tags')
         )
         return qs

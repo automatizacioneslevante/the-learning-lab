@@ -15,7 +15,6 @@ export default function Landing(){
             <div className="
                 border-2 rounded
                 m-0.5
-                overflow-y-auto
                 ">
                     <CourseCatalog />
             </div>

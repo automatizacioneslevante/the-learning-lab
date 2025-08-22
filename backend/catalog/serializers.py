@@ -10,7 +10,7 @@ class CoursePreviewSerializer(serializers.ModelSerializer):
         model = Course
         fields = ['id', 'title', 'slug', 
                   'description', 'tags_main', 'updated_at',
-                  'video_duration', 'resource_count', 'is_active']
+                  'video_duration', 'resource_count', 'is_active', 'image_preview']
         
         read_only_fields = fields
     
